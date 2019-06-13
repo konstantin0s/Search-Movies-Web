@@ -17,31 +17,10 @@ class App extends Component {
 this.performSearch("ant man")
   }
 
-//   performSearch = (searchTerm) => {
-//     const urlString = "https://api.themoviedb.org/3/search/movie?api_key=1b93c0b51183698174efd96f0c4507b6&query=" + searchTerm
-//    axios.get(urlString)
-//      .then(res => {
-//        const movies = res.data;
-//        console.log(movies);
-// // console.log(res);
-// const movieRows = [];
-// movies.forEach(movie => {
-//            movie.poster_src = "https://image.tmdb.org/t/p/w185" + movie.poster_path
-//                    console.log(movie.poster_path)
-//                    const movieRow = <MovieRow key={movie.id} movie={movie}/>
-//                    movieRows.push(movieRow)
-// })
-//        this.setState({
-//          rows: movieRows
-//        });
-//      })
-//      .catch(err => console.log(err));
-//  }
-
 
   performSearch(searchTerm) {
     console.log("Perform search using moviedb")
-    const urlString = "https://api.themoviedb.org/3/search/movie?api_key=1b93c0b51183698174efd96f0c4507b6&query=" + searchTerm
+    const urlString = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=` + searchTerm
     $.ajax({
       url: urlString,
       success: (searchResults) => {
