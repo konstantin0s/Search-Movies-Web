@@ -18,3 +18,28 @@
   width: 200px;
   height: 200px;
 }
+
+.container {
+  background-color: aliceblue;
+  padding: 5px;
+  margin: 15px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overview {
+  padding: 15px;
+  margin: 10px;
+}
+
+.row h3 {
+  text-align: center;
+}
+
+.row .btn-primary {
+position: relative;
+left: 100px;
+top: -20px;
+}
