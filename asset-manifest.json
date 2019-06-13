@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Search-Movies-Web/static/css/main.f9541ba7.chunk.css",
+    "main.js": "/Search-Movies-Web/static/js/main.17e919a2.chunk.js",
+    "main.js.map": "/Search-Movies-Web/static/js/main.17e919a2.chunk.js.map",
+    "runtime~main.js": "/Search-Movies-Web/static/js/runtime~main.85e4e736.js",
+    "runtime~main.js.map": "/Search-Movies-Web/static/js/runtime~main.85e4e736.js.map",
+    "static/js/2.b1b15d26.chunk.js": "/Search-Movies-Web/static/js/2.b1b15d26.chunk.js",
+    "static/js/2.b1b15d26.chunk.js.map": "/Search-Movies-Web/static/js/2.b1b15d26.chunk.js.map",
+    "index.html": "/Search-Movies-Web/index.html",
+    "precache-manifest.1e30139004cace0aad6fd4a9fdd6a667.js": "/Search-Movies-Web/precache-manifest.1e30139004cace0aad6fd4a9fdd6a667.js",
+    "service-worker.js": "/Search-Movies-Web/service-worker.js",
+    "static/css/main.f9541ba7.chunk.css.map": "/Search-Movies-Web/static/css/main.f9541ba7.chunk.css.map",
+    "static/media/cartoon.png": "/Search-Movies-Web/static/media/cartoon.67abc369.png"
+  }
+}
