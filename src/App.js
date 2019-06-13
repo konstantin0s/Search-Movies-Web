@@ -67,6 +67,10 @@ this.performSearch("ant man")
     })
   }
 
+  searchHandler = (e) => {
+ const searchTerm = e.target.value;
+    this.performSearch(searchTerm)
+  }
 
   render() {
     return (
@@ -86,7 +90,7 @@ this.performSearch("ant man")
     </tr>
   </tbody>
 </table>
-<input className="input" type="text" placeholder="Search..." />
+<input onChange={this.searchHandler} className="input" type="text" placeholder="Search..." />
       {
         this.state.rows
       }
