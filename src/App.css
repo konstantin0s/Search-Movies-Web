@@ -36,10 +36,24 @@
 
 .row h3 {
   text-align: center;
+  border-bottom: 3px dotted black;
 }
 
 .row .btn-primary {
 position: relative;
 left: 100px;
 top: -20px;
+}
+
+.row .fa {
+margin: 0 40px;
+color: blue;
+}
+
+.row img {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  width: 120px;
+  height: 160px;
 }
