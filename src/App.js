@@ -19,13 +19,13 @@ class App extends Component {
 
 
   performSearch(searchTerm) {
-    console.log("Perform search using moviedb")
+    // console.log("Perform search using moviedb")
     const urlString = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=` + searchTerm
     $.ajax({
       url: urlString,
       success: (searchResults) => {
         // console.log("Fetched data successfully")
-        // console.log(searchResults)
+        console.log(searchResults)
         const results = searchResults.results
         // console.log(results[0])
 
@@ -55,7 +55,7 @@ class App extends Component {
     return (
       <div className="App">
         <table className="titleBar">
-          <tbody>
+          <tbody className="tbody">
             <tr>
               <td>
                 <img className="float-left logo" src={cartoon} />
