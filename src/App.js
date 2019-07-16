@@ -9,12 +9,12 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-     };
+    };
 
   }
 
   componentWillMount() {
-this.performSearch("ant man")
+    this.performSearch("ant man")
   }
 
 
@@ -24,21 +24,21 @@ this.performSearch("ant man")
     $.ajax({
       url: urlString,
       success: (searchResults) => {
-        console.log("Fetched data successfully")
-        console.log(searchResults)
+        // console.log("Fetched data successfully")
+        // console.log(searchResults)
         const results = searchResults.results
-        console.log(results[0])
+        // console.log(results[0])
 
         var movieRows = []
 
         results.map((movie) => {
           movie.poster_src = "https://image.tmdb.org/t/p/w185" + movie.poster_path
-          console.log(movie.poster_path)
-          const movieRow = <MovieRow key={movie.id} movie={movie}/>
+          // console.log(movie.poster_path)
+          const movieRow = <MovieRow key={movie.id} movie={movie} />
           movieRows.push(movieRow)
         })
 
-        this.setState({rows: movieRows})
+        this.setState({ rows: movieRows })
       },
       error: (xhr, status, err) => {
         console.error("Failed to fetch data")
@@ -47,33 +47,38 @@ this.performSearch("ant man")
   }
 
   searchHandler = (e) => {
- const searchTerm = e.target.value;
+    const searchTerm = e.target.value;
     this.performSearch(searchTerm)
   }
 
   render() {
     return (
-          <div className="App">
-<table className="titleBar">
-  <tbody>
-    <tr>
-      <td>
-        <img style={{width: '40px'}} src={cartoon} />
-      </td>
-      <td>
-                <h1> MoviesDB Search</h1>
-      </td>
-      <td style={{width: '8px'}}>
+      <div className="App">
+        <table className="titleBar">
+          <tbody>
+            <tr>
+              <td>
+                <img className="float-left logo" src={cartoon} />
+              </td>
+              <td>
+                <h2 className="title">MoviesDB - Search </h2>
+              </td>
+              <td style={{ width: '8px' }}>
 
-      </td>
-    </tr>
-  </tbody>
-</table>
-<input onChange={this.searchHandler} className="input" type="text" placeholder="Search..." />
-      {
-        this.state.rows
-      }
-    </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div className="container">
+          <div className="form-group">
+            <input onChange={this.searchHandler} className="form-control input" type="text" placeholder="Search..." />
+          </div>
+        </div>
+
+        {
+          this.state.rows
+        }
+      </div>
     );
   }
 }
