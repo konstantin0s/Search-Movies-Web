@@ -15,6 +15,11 @@ body {
   justify-content: center;
 }
 
+.container: hover {
+  opacity: 0.9;
+  transform: scale(1.1);
+}
+
 .body-container {
   background-image: url(movie.jpg);
   background-position: center center;
@@ -96,8 +101,8 @@ input[type=text] {
 }
 
 .form-group {
-  position: relative;
-  top: 8px;
+  position: absolute;
+  top: 5em;
   border: 1px solid grey;
   padding: 2px;
   height: 120px;
@@ -197,6 +202,7 @@ input[type=text] {
   left: -100px;
   top: 10px;
   padding: 5px;
+  cursor: pointer;
 }
 
 .row .fa {
@@ -224,6 +230,7 @@ input[type=text] {
   display: flex;
   flex-direction: row;
   max-width: 100%;
+  z-index: -10;
 }
 
 .view {
